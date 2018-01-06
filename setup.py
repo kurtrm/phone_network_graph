@@ -1,4 +1,4 @@
-"""Setup for kurt's data set analysis."""
+"""Setup for creation of Kurt's phone network graph."""
 from setuptools import setup
 
 
@@ -15,6 +15,6 @@ setup(
     author='Kurt Maurer',
     author_email='kurtrm@gmail.com',
     license='MIT',
-    install_requires=['PyPDF2'],
+    install_requires=['PyPDF2', 'numpy', 'pandas', 'matplotlib'],
     extras_require=extra_packages
 )
