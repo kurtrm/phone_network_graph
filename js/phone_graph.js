@@ -42,8 +42,10 @@ var node = svg.append("g")
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d){return d.id;}))
+    .force("collide", d3.forceCollide(5))
     .force("charge", d3.forceManyBody()
-                            .strength(forcesStrength))
+                            .strength(forcesStrength)
+                            .distanceMax(100))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 
