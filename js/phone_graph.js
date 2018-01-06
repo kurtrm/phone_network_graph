@@ -1,7 +1,7 @@
 'use strict';
 
 var width = 960,
-    height = 540
+    height = 500
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
@@ -42,11 +42,12 @@ var node = svg.append("g")
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d){return d.id;}))
-    .force("collide", d3.forceCollide(5))
+    .force("collide", d3.forceCollide(4))
     .force("charge", d3.forceManyBody()
-                            .strength(forcesStrength)
-                            .distanceMax(100))
-    .force("center", d3.forceCenter(width / 2, height / 2));
+                            .distanceMax(110)
+                            .distanceMin(50))
+    .force("center", d3.forceCenter(width / 2, height / 2))
+    .velocityDecay(.6);
 
 
 var label = svg.selectAll('.names')
@@ -64,10 +65,10 @@ var label = svg.selectAll('.names')
             .on("end", dragended));
 
 
-node.append("title")
-    .attr("dx", 10)
-    .attr("dy", ".35em")
-    .text(function(d) { return d.id; });
+// node.append("title")
+//     .attr("dx", 10)
+//     .attr("dy", ".35em")
+//     .text(function(d) { return d.id; });
 
 
 simulation
@@ -76,7 +77,7 @@ simulation
 
 simulation.force("link")
     .links(mega_phone_graph.links.Text.concat(mega_phone_graph.links.Talk))
-    .distance(function(d){return d.value;});
+    // .distance(function(d){return d.value;});
 
 function colored(d){
     if (d.color === "green" || d.color === "blue") {
@@ -84,13 +85,13 @@ function colored(d){
     };
 }
 
-function forcesStrength(d) {
-    if (d.color === "grey") {
-        return -3;
-    } else {
-        return -15;
-    };
-}
+// function forcesStrength(d) {
+//     if (d.color === "grey") {
+//         return -3;
+//     } else {
+//         return -15;
+//     };
+// }
 
 function ticked() {
     link
@@ -108,7 +109,7 @@ function ticked() {
 }
 
 function dragstarted(d) {
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  if (!d3.event.active) simulation.alphaTarget(0.5).restart();
   d.fx = d.x;
   d.fy = d.y;
 }
@@ -119,7 +120,7 @@ function dragged(d) {
 }
 
 function dragended(d) {
-  if (!d3.event.active) simulation.alphaTarget(0);
+  if (!d3.event.active) simulation.alphaTarget(0.5);
   d.fx = null;
   d.fy = null;
 }
