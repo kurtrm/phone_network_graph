@@ -5,7 +5,7 @@
 
 Version: *1.0*
 
-Module that parses T-Mobile phone bills, cleans the data, and
+Module that parses T-Mobile phone bills, cleans the data, and creates a visualization using d3.js.
 * Feature #1
 * Feature #2
 * Feature #3
@@ -17,6 +17,8 @@ Module that parses T-Mobile phone bills, cleans the data, and
 ### Dependencies
 ---
 * PyPDF2
+* Pandas
+* Numpy
 
 ### Getting Started
 ---
@@ -38,7 +40,10 @@ Now now that you have cloned your repo and changed directories into the project,
 
 `$ source ENV/bin/activate`
 
-`$ pip install -r requirements.txt`
+`$ pip install -e .`
+
+`$ pip install -e .[testing]`
+
 ### Test Suite
 ---
 ##### *Running Tests*
