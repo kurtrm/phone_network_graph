@@ -60,9 +60,7 @@ The testing files for this project are:
 | File Name | Description |
 |:---:|:---:|
 | `./tests/test_labeled_property_graph.py` | Test labeled property graph comprehensively. |
-| `./tests/test_parser.py` | Test parser to ensure we are getting expected values.
-
-Many tests target assumptions, not necessarily code. |
+| `./tests/test_parser.py` | Test parser to ensure we are getting expected values. Many tests target assumptions, not necessarily code. |
 | `./tests/test_refactored_lpg.py` | Test refactored labeled property graph. |
 
 ### Development Tools
