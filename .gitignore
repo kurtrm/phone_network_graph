@@ -99,3 +99,12 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# configuration files
+*.pdf
+data/*
+bills/*
+tests/text_docs.p
+*.vcf
+*.json
+!docs/mega_phone_graph.json

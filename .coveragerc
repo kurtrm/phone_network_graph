@@ -1,0 +1,9 @@
+[run]
+source = 
+    src/lpg_refactor.py
+    src/labeled_property_graph.py
+omit = 
+    src/__init__.py
+    src/tmobile_bill_parser.py
+[report]
+show_missing = False
