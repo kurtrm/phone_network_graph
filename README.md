@@ -1,4 +1,4 @@
-# phone_network_graph
+# Communication Network Graph
 ---
 ### Description
 [![Build Status](https://travis-ci.org/kurtrm/phone_network_graph.svg?branch=master)](https://travis-ci.org/kurtrm/phone_network_graph) [![Coverage Status](https://coveralls.io/repos/github/kurtrm/phone_network_graph/badge.svg)](https://coveralls.io/github/kurtrm/phone_network_graph)
@@ -6,9 +6,9 @@
 Version: *1.0*
 
 Module that parses T-Mobile phone bills, cleans the data, and creates a visualization using d3.js.
-* Feature #1
-* Feature #2
-* Feature #3
+* Provides a parser that uses PyPDF2 to extract data from T-Mobile phone bills and puts them into a dictionary.
+* A crude implementation of a labeled property graph data structure.
+* A rudimentary visualization of the network graph using d3.js, as well as jupyter notebooks used for data cleaning and manipulation.
 
 ### Authors
 ---
