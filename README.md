@@ -2,6 +2,8 @@
 
 _See the visualization [here](https://kurtrm.github.io/phone_network_graph/)._
 
+Note: I moved on to a different project before correcting the jitter in the D3 animation. I'll revisit this in the future.
+
 ---
 ### Description
 [![Build Status](https://travis-ci.org/kurtrm/phone_network_graph.svg?branch=master)](https://travis-ci.org/kurtrm/phone_network_graph) [![Coverage Status](https://coveralls.io/repos/github/kurtrm/phone_network_graph/badge.svg)](https://coveralls.io/github/kurtrm/phone_network_graph)
