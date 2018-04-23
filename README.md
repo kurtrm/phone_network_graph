@@ -1,5 +1,13 @@
 # Communication Network Graph
 
+April 23, 2018
+To do:
+Learned about measures of centrality:
+- degree centrality
+- betweenness_centrality
+
+Also need to add breadth first traversal and perhaps others.
+
 _See the visualization [here](https://kurtrm.github.io/phone_network_graph/)._
 
 Note: I moved on to a different project before correcting the jitter in the D3 animation. I'll revisit this in the future.
